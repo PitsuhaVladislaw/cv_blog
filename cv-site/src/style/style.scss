@@ -167,11 +167,17 @@ body {
 
 .text-block {
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 400;
     font-family: $font-stack;
     color: #000000;
     line-height: 38px;
     height: 474px;
     width: 474px;
     margin: 0 auto;
+}
+
+#h3-bk-text {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
