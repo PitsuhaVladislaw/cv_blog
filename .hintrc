@@ -11,7 +11,8 @@
     ],
     "button-type": "off",
     "no-inline-styles": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "highest-available-document-mode": "off"
   },
   "browserslist": [
     "defaults",
