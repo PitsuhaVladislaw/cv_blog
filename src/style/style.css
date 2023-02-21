@@ -1,30 +1,103 @@
+:root {
+  --back--color: hwb(0 0% 100%);
+}
+
 body {
   margin: 0 auto;
 }
 
 * {
-  border: 1px solid rgb(36, 177, 20);
+  border: 1px solid red;
 }
 
 .head-main {
   height: auto;
   width: auto;
-  background: black;
+  background: var(--back--color);
 }
 
 #bor-size {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   height: 120px;
   margin: 0 auto;
   width: 1280px;
 }
 
+.logo-icon {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  border: 1px solid white;
+}
+.logo-icon h1 {
+  position: absolute;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 70px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 0;
+  top: 7px;
+}
+
+#ic-1 {
+  left: 20px;
+}
+
+#ic-2 {
+  left: 25px;
+}
+
+#ic-3 {
+  left: 50px;
+}
+
+#ic-4 {
+  right: 51px;
+}
+
+#ic-5 {
+  right: 20px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 21px;
+  height: 87px;
+  width: 951px;
+}
+.logo-text p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.3em;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 #projects, #education, #knoledge, .main {
   background-color: #0e0a41;
-  height: 790px;
+  height: 700px;
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top: 10px solid black;
+  border-top: 10px solid var(--back--color);
+}
+
+.main {
+  background-image: url(../foto/log/image-4.png);
 }
 
 .fon-set {
@@ -35,11 +108,96 @@ body {
 
 .block-infa {
   display: flex;
+  margin-top: 23px;
+  justify-content: space-evenly;
 }
 
 .com-infa {
-  height: 577px;
+  height: 588px;
   width: 647px;
+}
+
+.blc-cont {
+  display: flex;
+}
+
+.bor-foto {
+  width: 260px;
+  height: 370px;
+  background: rgba(22, 21, 21, 0.5);
+  border: 6px solid #7a7171;
+  border-radius: 70px;
+}
+
+.block-desc {
+  height: 254px;
+  width: 370px;
+  background: var(--back--color);
+  border: 3px solid #7A7171;
+  border-radius: 54px;
+  margin-top: 28px;
+}
+.block-desc h3 {
+  margin: 0 auto;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.bl-desc-text {
+  display: flex;
+  justify-content: center;
+}
+.bl-desc-text div {
+  margin: 0px 0px 0px 20px;
+}
+.bl-desc-text div p {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+.bl-desc-text div p span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: right;
+  color: #BF0707;
+}
+
+#but-text {
+  width: 196px;
+  height: 28px;
+  background: white;
+  border: 3px solid #F30909;
+  border-radius: 40px;
+  margin: 17px auto 0px;
+}
+#but-text h2 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--back--color);
+  margin: 0 auto;
+  text-align: center;
+}
+
+#cont-menu {
+  position: absolute;
+  bottom: 0px;
+  height: 213px;
+  width: 418px;
+  background: var(--back--color);
+  border: 1px solid white;
 }
 
 .nav-menu {
@@ -50,12 +208,15 @@ body {
   width: 280px;
   border-radius: 50px;
 }
+.nav-menu button:hover {
+  background: rgba(118, 15, 15, 0.6);
+}
 
 .desc-infa {
   display: flex;
   height: 577px;
   width: 485px;
-  background: black;
+  background: hwb(0deg 0% 100%/50%);
   border: 5px solid #7A7171;
   border-radius: 50px;
   justify-content: center;
@@ -74,11 +235,15 @@ body {
 }
 
 #btn-4, #btn-3, #btn-2, #btn-1 {
-  background: rgba(41, 39, 39, 0.5);
-  border: 5px solid #000000;
+  background: rgba(211, 203, 203, 0.6);
+  border: 5px solid var(--back--color);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#btn-4 img, #btn-3 img, #btn-2 img, #btn-1 img {
+  height: 65px;
+  width: 72px;
 }
 
 #btn-1 {
@@ -99,7 +264,7 @@ body {
 
 #knoledge {
   height: 790px;
-  background-image: url(../foto/log/image-5.png);
+  background-image: url(../foto/log/image-5.jpg);
 }
 
 #education {
@@ -131,7 +296,7 @@ body {
   display: flex;
   width: 450px;
   height: 78px;
-  border: 5px solid #000000;
+  border: 5px solid var(--back--color);
   border-radius: 40px 0px;
   justify-content: center;
   align-items: center;
@@ -142,13 +307,12 @@ body {
   font-size: 35px;
   font-weight: 700;
   font-family: "Inter";
-  color: #000000;
+  color: var(--back--color);
   line-height: 38px;
   align-items: center;
   text-align: center;
   letter-spacing: 0.5em;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   margin: 0 auto;
 }
 
@@ -156,12 +320,15 @@ body {
   font-size: 23px;
   font-weight: 400;
   font-family: "Inter";
-  color: #000000;
+  color: var(--back--color);
   line-height: 38px;
   height: 474px;
   width: 474px;
   margin: 0 auto;
   letter-spacing: 5px;
+}
+.text-block span {
+  font-weight: 800;
 }
 
 #h3-bk-text {
@@ -173,7 +340,7 @@ body {
 ul li, ul p {
   font-family: "Inter";
   font-size: 30px;
-  color: #000000;
+  color: var(--back--color);
 }
 
 ul {
@@ -226,35 +393,43 @@ ul li {
   margin-top: 18px;
   height: 560px;
   width: 356px;
-  background: rgba(255, 255, 255, 0.26);
-  border: 3px solid #000000;
+  background: rgba(49, 134, 123, 0.5);
+  border: 3px solid var(--back--color);
   border-radius: 60px 0px 60px 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
 }
 #skill-text p {
   font-family: "Inter";
   font-size: 22px;
   font-weight: 700;
-  color: #000000;
+  color: var(--back--color);
   text-align: justify;
-  text-indent: 60px;
-  line-height: 27px;
+  text-indent: 45px;
+  line-height: 35px;
+  margin: 0;
+  padding: 47px 23px;
+}
+
+.close-text {
+  display: none;
 }
 
 .type-slills {
-  margin-left: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #select-skill {
   height: 52px;
   width: 356px;
-  border: 2px solid #000000;
-  background: rgba(107, 109, 107, 0.61);
+  border: 2px solid var(--back--color);
+  background: rgba(49, 134, 123, 0.61);
   border-radius: 30px 30px 15px 15px;
   font-size: 30px;
-  color: white;
+  color: var(--back--color);
   font-family: "Inter";
   font-weight: 400;
   text-align: center;
@@ -263,7 +438,7 @@ ul li {
 }
 
 #select-skill:hover {
-  background: rgba(17, 115, 27, 0.61);
+  background: rgba(33, 168, 145, 0.69);
 }
 
 .work-cards {
@@ -286,6 +461,16 @@ ul li {
   width: auto;
 }
 
+#work-4 {
+  height: auto;
+  width: auto;
+}
+
+#work-5 {
+  height: auto;
+  width: auto;
+}
+
 .work-screen-open {
   display: flex;
   justify-content: center;
@@ -293,7 +478,7 @@ ul li {
   height: 540px;
   width: 505px;
   background: rgba(69, 43, 170, 0.4);
-  border: 5px solid #000000;
+  border: 5px solid var(--back--color);
   border-radius: 20px 20px 50px 50px;
 }
 .work-screen-open img {
@@ -307,15 +492,15 @@ ul li {
   justify-content: center;
   align-items: center;
   height: 526px;
-  width: 231px;
+  width: 131px;
   background: rgba(69, 43, 170, 0.4);
-  border: 5px solid #000000;
+  border: 5px solid var(--back--color);
   border-radius: 20px 20px 85px 85px;
   margin-top: 84px;
 }
 .work-screen img {
   height: 516px;
-  width: 221px;
+  width: 121px;
   border-radius: 20px 20px 85px 85px;
 }
 
@@ -323,6 +508,7 @@ ul li {
   display: flex;
   width: 462px;
   height: 69px;
+  margin: 0 a;
   border-radius: 50px;
   background: rgba(68, 26, 121, 0.62);
 }
