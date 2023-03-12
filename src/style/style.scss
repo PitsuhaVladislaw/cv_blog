@@ -8,10 +8,6 @@ body {
     margin: 0 auto;
 }
 
-* {
-    border: 1px solid red;
-}
-
 .head-main {
     height: auto;
     width: auto;
@@ -21,7 +17,7 @@ body {
 #bor-size {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 120px;
     margin: 0 auto;
     width: 1280px;
@@ -34,19 +30,9 @@ body {
     align-items: center;
     height: auto;
     width: auto;
-    border: 1px solid white;
-
-    h1 {
-        position: absolute;
-        font-family: monospace;
-        font-weight: 400;
-        font-size: 80px;
-        line-height: 70px;
-        text-align: center;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        margin: 0;
-        top: 7px;
+    img {
+        width: 136px;
+        height: 120px;
     }
 }
 
@@ -261,10 +247,18 @@ body {
     border-radius: 50px 0px 0px 0px;;
 }
 
+#btn-1:hover {
+    background: #9b1f1fac;
+}
+
 
 #btn-2 {
     @extend %settings-shared;
     border-radius: 0px 50px 0px 0px;;
+}
+
+#btn-2:hover {
+    background: #9b1f1fac;
 }
 
 #btn-3 {
@@ -272,9 +266,17 @@ body {
     border-radius: 0px 0px 0px 50px;;
 }
 
+#btn-3:hover {
+    background: #9b1f1fac;
+}
+
 #btn-4 {
     @extend %settings-shared;
     border-radius: 0px 0px 50px 0px;;
+}
+
+#btn-4:hover {
+    background: #9b1f1fac;
 }
 
 #knoledge {
@@ -443,6 +445,10 @@ ul {
     align-items: center;
 }
 
+.closedText {
+    display: none;
+}
+
 #select-skill {
     height: 52px;
     width: 356px;
@@ -492,15 +498,22 @@ ul {
     width: auto;
 }
 
+.work-block-open {
+    background: rgba(69, 43, 170, 0.4);
+    border: 5px solid var(--back--color);
+    border-radius: 20px 20px 50px 50px;
+}
+
 .work-screen-open {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 540px;
+    height: 456px;
     width: 505px;
-    background: rgba(69, 43, 170, 0.4);
-    border: 5px solid var(--back--color);
     border-radius: 20px 20px 50px 50px;
+    margin-top: 84px;
+    background: rgba(69, 43, 170, 0.4);
+    border: 5px solid black;
     img {
         width: 495px;
         height: 530px;
@@ -527,37 +540,39 @@ ul {
 
 .floor-work {
     display: flex;
-    width: 462px;
+    width: 463px;
     height: 69px;
-    margin: 0 a;
+    margin: 0 auto;
+    border: 3px solid black;
     border-radius: 50px;
     background: rgba(68, 26, 121, 0.62);
     .icon-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 69px;
         width: 69px;
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 50% 0 0 50%;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
         img {
-            width: 69px;
-            height: 69px;
-            position: relative;
-            top: 0;
-            right: 0.1px;
+            width: 71px;
+            height: 71px;
         }
     }
     .text-icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 368px;
+        margin: 0 auto;
+        width: auto;
         height: 69px;
         p {
             font-size: 35px;
             font-weight: 700;
-            font-family: $font-stack;
+            font-family: 'Inter';
             color: #FFFFFF;
             text-align: center;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.4em;
             margin: 0 auto;
         }
     }

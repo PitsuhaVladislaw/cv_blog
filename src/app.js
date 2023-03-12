@@ -1,17 +1,31 @@
-const contMenu = document.getElementById("cont-menu");
+/*
+* Functions for block "Knoledge"
+*/
+const selectSkl = document.getElementById("select-skill");
 
-const btnSoftSkl = document.getElementById("soft-skl");
-const btnHardSkl = document.getElementById("hard-skl");
-
-const textSkill = document.getElementById("skill-text");
+const optHardSkl = document.getElementById("hard-skl");
+const optSoftSkl = document.getElementById("soft-skl");
 
 const softText = document.getElementById("soft-text");
-const hardText = document.getElementById("hard-text")
+const hardText = document.getElementById("hard-text");
 
-function clickButton() {
-    hardText.addEventListener('click', () => {
-        softText.classList.add("close-text");
-    })
-}
+selectSkl.addEventListener("change", function(e) {
+    e.preventDefault();
 
-clickButton()
+    const optHardSkl = document.getElementById("hard-skl");
+    const optSoftSkl = document.getElementById("soft-skl");
+
+    optSoftSkl.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        hardText.classList.add("closedText");
+        softText.classList.remove("closedText");
+    });
+
+    optHardSkl.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        softText.classList.add("closedText");
+        hardText.classList.remove("closedText");
+    });
+})

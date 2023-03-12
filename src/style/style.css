@@ -6,10 +6,6 @@ body {
   margin: 0 auto;
 }
 
-* {
-  border: 1px solid red;
-}
-
 .head-main {
   height: auto;
   width: auto;
@@ -19,7 +15,7 @@ body {
 #bor-size {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 120px;
   margin: 0 auto;
   width: 1280px;
@@ -32,19 +28,10 @@ body {
   align-items: center;
   height: auto;
   width: auto;
-  border: 1px solid white;
 }
-.logo-icon h1 {
-  position: absolute;
-  font-family: monospace;
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 70px;
-  text-align: center;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin: 0;
-  top: 7px;
+.logo-icon img {
+  width: 136px;
+  height: 120px;
 }
 
 #ic-1 {
@@ -250,16 +237,32 @@ body {
   border-radius: 50px 0px 0px 0px;
 }
 
+#btn-1:hover {
+  background: rgba(155, 31, 31, 0.6745098039);
+}
+
 #btn-2 {
   border-radius: 0px 50px 0px 0px;
+}
+
+#btn-2:hover {
+  background: rgba(155, 31, 31, 0.6745098039);
 }
 
 #btn-3 {
   border-radius: 0px 0px 0px 50px;
 }
 
+#btn-3:hover {
+  background: rgba(155, 31, 31, 0.6745098039);
+}
+
 #btn-4 {
   border-radius: 0px 0px 50px 0px;
+}
+
+#btn-4:hover {
+  background: rgba(155, 31, 31, 0.6745098039);
 }
 
 #knoledge {
@@ -422,6 +425,10 @@ ul li {
   align-items: center;
 }
 
+.closedText {
+  display: none;
+}
+
 #select-skill {
   height: 52px;
   width: 356px;
@@ -471,15 +478,22 @@ ul li {
   width: auto;
 }
 
+.work-block-open {
+  background: rgba(69, 43, 170, 0.4);
+  border: 5px solid var(--back--color);
+  border-radius: 20px 20px 50px 50px;
+}
+
 .work-screen-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 540px;
+  height: 456px;
   width: 505px;
-  background: rgba(69, 43, 170, 0.4);
-  border: 5px solid var(--back--color);
   border-radius: 20px 20px 50px 50px;
+  margin-top: 84px;
+  background: rgba(69, 43, 170, 0.4);
+  border: 5px solid black;
 }
 .work-screen-open img {
   width: 495px;
@@ -506,30 +520,32 @@ ul li {
 
 .floor-work {
   display: flex;
-  width: 462px;
+  width: 463px;
   height: 69px;
-  margin: 0 a;
+  margin: 0 auto;
+  border: 3px solid black;
   border-radius: 50px;
   background: rgba(68, 26, 121, 0.62);
 }
 .floor-work .icon-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 69px;
   width: 69px;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 50% 0 0 50%;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
 }
 .floor-work .icon-pic img {
-  width: 69px;
-  height: 69px;
-  position: relative;
-  top: 0;
-  right: 0.1px;
+  width: 71px;
+  height: 71px;
 }
 .floor-work .text-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 368px;
+  margin: 0 auto;
+  width: auto;
   height: 69px;
 }
 .floor-work .text-icon p {
@@ -538,6 +554,6 @@ ul li {
   font-family: "Inter";
   color: #FFFFFF;
   text-align: center;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.4em;
   margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
