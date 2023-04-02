@@ -120,7 +120,7 @@ body {
   height: 254px;
   width: 370px;
   background: var(--back--color);
-  border: 3px solid #7A7171;
+  border: 4px solid #7A7171;
   border-radius: 54px;
   margin-top: 28px;
 }
@@ -135,6 +135,7 @@ body {
 }
 
 .bl-desc-text {
+  margin-top: 31px;
   display: flex;
   justify-content: center;
 }
@@ -291,7 +292,7 @@ body {
 #edu-block {
   width: 520px;
   height: 630px;
-  background: linear-gradient(0deg, rgba(69, 5, 80, 0.5), rgba(69, 5, 80, 0.5)), rgba(255, 255, 255, 0.75);
+  background: linear-gradient(0deg, rgba(50, 19, 101, 0.7), rgba(50, 19, 101, 0.7)), rgba(255, 255, 255, 0.9);
   border-radius: 40px;
 }
 
@@ -396,7 +397,7 @@ ul li {
   margin-top: 18px;
   height: 560px;
   width: 356px;
-  background: rgba(49, 134, 123, 0.5);
+  background: rgba(49, 134, 123, 0.9);
   border: 3px solid var(--back--color);
   border-radius: 60px 0px 60px 60px;
   display: inline-block;

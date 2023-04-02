@@ -8,9 +8,20 @@ body {
 }
 */
 
+#work-1 {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+#work-2 {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
 #work-3 {
     height: auto;
-    width: 505px;
+    width: auto;
     margin: 0 auto;
 }
 
