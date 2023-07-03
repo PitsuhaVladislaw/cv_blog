@@ -1,7 +1,9 @@
 $font-stack: 'Inter'; 
 
 :root {
-    --back--color: hwb(0 0% 100%);
+    --button-red-color: #760F0F99;
+    --back-men-grey-color: rgba(74, 69, 69, 0.80);
+    --active-grey-color: rgba(122, 122, 122, 0.70);
 }
 
 body {
@@ -11,7 +13,7 @@ body {
 .head-main {
     height: auto;
     width: auto;
-    background: var(--back--color);
+    background: black;
 }
 
 #bor-size {
@@ -78,27 +80,22 @@ body {
 
 %size-fon {
     background-color: #0e0a41;
-    height: 700px;
     width: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 10px solid var(--back--color);
-}
-
-.main {
-    @extend %size-fon;
-    background-image: url(../foto/log/image-4.png);
+    border-top: 1px solid black;
+    border-bottom: 10px solid black;
 }
 
 .fon-set {
     margin: 0 auto;
-    width: 1280px;
-    height: 670px;
+    width: auto;
+    height: auto;
 }
 
 .block-infa {
     display: flex;
-    margin-top: 23px;
+    margin-top: 23px auto 70px;
     justify-content: space-evenly;
 }
 
@@ -117,18 +114,23 @@ body {
     background: rgba(22, 21, 21, 0.5);
     border: 6px solid #7a7171;
     border-radius: 70px;
+    img {
+        width: 260px;
+        height: 370px;
+        border-radius: 70px;
+    }
 }
 
 .block-desc {
     height: 254px;
     width: 370px;
-    background: var(--back--color);
+    background: black;
     border: 4px solid #7A7171;
     border-radius: 54px;
     margin-top: 28px;
 
     h3 {
-        margin: 0 auto;
+        margin: 14px auto 0;
         font-family: 'Inter';
         font-weight: 400;
         font-size: 30px;
@@ -139,28 +141,28 @@ body {
 }
 
 .bl-desc-text {
-    margin-top: 31px;
     display: flex;
     justify-content: center;
+    margin: 30px 26px 0;
 
     div {
-        margin: 0px 0px 0px 20px;
+        display: grid;
 
         p {
             font-family: 'Inter';
             font-weight: 500;
-            font-size: 25px;
+            font-size: 20px;
             line-height: 30px;
-            text-align: center;
-            letter-spacing: 0.2em;
+            letter-spacing: 2px;
             color: #FFFFFF;
-            margin: 10px 0;
+            margin: 5px 20px;
     
             span {
                 font-family: 'Inter';
                 font-weight: 400;
-                font-size: 25px;
+                font-size: 20px;
                 line-height: 30px;
+                letter-spacing: 0;
                 text-align: right;
                 color: #BF0707;
             }
@@ -170,20 +172,21 @@ body {
 
 #but-text {
     width: 196px;
-    height: 28px;
-    background: white;
+    height: auto;
+    background: black;
     border: 3px solid #F30909;
     border-radius: 40px;
-    margin: 17px auto 0px;
+    margin: 18px auto 0px;
 
     h2 {
         font-family: $font-stack;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
-        color: var(--back--color);
+        font-size: 14px;
+        color: white;
         margin: 0 auto;
         text-align: center;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
     }
 }
 
@@ -192,110 +195,78 @@ body {
     bottom: 0px;
     height: 213px;
     width: 418px;
-    background: var(--back--color);
+    background: black;
     border: 1px solid white;
 }
 
 .nav-menu {
-    display: grid;
-    grid-template-columns: 140px 140px;
-    grid-template-rows: 82px 82px;
-    height: 164px;
-    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 480px;
     border-radius: 50px;
+    background: var(--back-men-grey-color);
+
+    button {
+        width: 120px;
+        border: 5px solid black;
+        background: var(--back-men-grey-color);
+    }
 
     button:hover {
-        background: rgba(118, 15, 15, 0.6);
+        background: var(--active-grey-color);
+    }
+    img {
+        width: 56px;
+        height: 56px;
     }
 }
 
 .desc-infa { 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 577px;
     width: 485px;
     background: hwb(0deg 0% 100% / 50%);
     border: 5px solid #7A7171;
     border-radius: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-desc {
-    font-weight: 700;
-    font-size: 23px;
-    font-family: $font-stack;
-    line-height: 27.84px;
-    text-align: justify;
-    color: white;
-    width: 431px;
-    text-indent: 50px;
-}
-
-%settings-shared {
-    background: rgba(211, 203, 203, 0.6);
-    border: 5px solid var(--back--color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-        height: 65px;
-        width: 72px;
+    p {
+        font-weight: 700;
+        font-size: 18px;
+        font-family: $font-stack;
+        letter-spacing: 2px;
+        text-indent: 50px;
+        text-align: justify;
+        color: white;
+        width: 431px;
+        margin: 5px;
     }
 }
 
-#btn-1 {
-    @extend %settings-shared;
-    border-radius: 50px 0px 0px 0px;;
-}
-
-#btn-1:hover {
-    background: #9b1f1fac;
-}
-
-
-#btn-2 {
-    @extend %settings-shared;
-    border-radius: 0px 50px 0px 0px;;
-}
-
-#btn-2:hover {
-    background: #9b1f1fac;
-}
-
-#btn-3 {
-    @extend %settings-shared;
-    border-radius: 0px 0px 0px 50px;;
-}
-
-#btn-3:hover {
-    background: #9b1f1fac;
-}
-
-#btn-4 {
-    @extend %settings-shared;
-    border-radius: 0px 0px 50px 0px;;
-}
-
-#btn-4:hover {
-    background: #9b1f1fac;
+.main {
+    @extend %size-fon;
+    background-color: black;
 }
 
 #knoledge {
-    height: 790px;
+    height: auto;
     @extend %size-fon;
-    background-image: url(../foto/log/image-5.jpg);
+    background-image: url(../assets/image/image-5.jpg);
 }
 
 #education {
     height: 790px;
     @extend %size-fon;
-    background-image: url(../foto/log/image\ 8.png);
+    background-image: url(../assets/image/image\ 8.png);
 }
 
 #projects {
     height: 790px;
     @extend %size-fon;
-    background-image: url(../foto/log/image\ 7.png);
+    background-image: url(../assets/image/image\ 7.png);
 }
 
 .edu-blocks {
@@ -304,6 +275,7 @@ body {
     align-items: center;
     padding-left: 90px;
     padding-right: 90px;
+    margin: 80px auto 0;
 }
 
 #edu-block {
@@ -318,31 +290,29 @@ body {
     display: flex;
     width: 450px;
     height: 78px;
-    border: 5px solid var(--back--color);
+    border: 5px solid black;
     border-radius: 40px 0px;
     justify-content: center;
     align-items: center;
     margin: 30px auto 25px;
-}
-
-.h-text {
-    font-size: 35px;
-    font-weight: 700;
-    font-family: $font-stack;
-    color: var(--back--color);
-    line-height: 38px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.5em;
-    text-decoration-line: underline;
-    margin: 0 auto;
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        font-family: $font-stack;
+        color: black;
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: 18.75px;
+        text-decoration-line: underline;
+        margin: 0 auto;
+    }
 }
 
 .text-block {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
     font-family: "Inter";
-    color: var(--back--color);
+    color: black;
     line-height: 38px;
     height: 474px;
     width: 474px;
@@ -350,19 +320,15 @@ body {
     letter-spacing: 5px;
     span {
         font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 10px;
     }
-}
-
-#h3-bk-text {
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 10px;
 }
 
 %text-ul {
     font-family: $font-stack;
-    font-size: 30px;
-    color: var(--back--color);
+    font-size: 24px;
+    color: black;
 }
 
 ul {
@@ -377,13 +343,13 @@ ul {
         @extend %text-ul;
         font-weight: 400px;
         margin-left: 50px;
-        letter-spacing: 10px;
+        letter-spacing: 12px;
     }
 }
 
 .block-slills {
     display: flex;
-    margin: 0 auto;
+    margin: 80px 90px 70px;
 }
 
 .blk-pic {
@@ -413,25 +379,32 @@ ul {
     margin-left: 4px;
 }
 
-#skill-text {
+#soft-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 18px;
-    height: 560px;
+    height: auto;
     width: 356px;
     background: rgba(49, 134, 123, 0.90);
-    border: 3px solid var(--back--color);
+    border: 3px solid black;
     border-radius: 60px 0px 60px 60px;
-    display: inline-block;
+    padding: 47px 23px;
     p {
         font-family: $font-stack;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 700;
-        color: var(--back--color);
+        color: black;
         text-align: justify;
         text-indent: 45px;
-        line-height: 35px;
-        margin: 0;
-        padding: 47px 23px;
+        line-height: 25px;
+        word-spacing: 20px;
     }
+}
+
+#hard-text {
+    display: none;
 }
 
 .close-text {
@@ -453,11 +426,11 @@ ul {
 #select-skill {
     height: 52px;
     width: 356px;
-    border: 2px solid var(--back--color);
+    border: 2px solid black;
     background: rgb(49 134 123 / 0.61);
     border-radius: 30px 30px 15px 15px;
     font-size: 30px;
-    color: var(--back--color);
+    color: black;
     font-family: $font-stack;
     font-weight: 400;
     text-align: center;
@@ -501,7 +474,7 @@ ul {
 
 .work-block-open {
     background: rgba(69, 43, 170, 0.4);
-    border: 5px solid var(--back--color);
+    border: 5px solid black;
     border-radius: 20px 20px 50px 50px;
 }
 
@@ -512,12 +485,12 @@ ul {
     height: 456px;
     width: 505px;
     border-radius: 20px 20px 50px 50px;
-    margin-top: 84px;
     background: rgba(69, 43, 170, 0.4);
     border: 5px solid black;
+    margin-top: 80px;
     img {
-        width: 495px;
-        height: 530px;
+        width: 500px;
+        height: 450px;
         border-radius: 20px 20px 50px 50px;
     }
 } 
@@ -529,9 +502,9 @@ ul {
     height: 526px;
     width: 131px;
     background: rgba(69, 43, 170, 0.4);
-    border: 5px solid var(--back--color);
+    border: 5px solid black;
     border-radius: 20px 20px 85px 85px;
-    margin-top: 84px;
+    margin-top: 80px;
     img {
         height: 516px;
         width: 121px;
@@ -568,12 +541,12 @@ ul {
         width: auto;
         height: 69px;
         p {
-            font-size: 35px;
+            font-size: 25px;
             font-weight: 700;
             font-family: 'Inter';
             color: #FFFFFF;
             text-align: center;
-            letter-spacing: 0.4em;
+            letter-spacing: 15px;
             margin: 0 auto;
         }
     }

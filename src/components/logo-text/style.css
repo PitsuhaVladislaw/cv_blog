@@ -9,6 +9,7 @@ body {
 */
 
 #work-1 {
+    display: none;
     height: auto;
     width: auto;
     margin: 0 auto;
@@ -20,10 +21,13 @@ body {
     margin: 0 auto;
 }
 #work-3 {
+    display: none;
     height: auto;
     width: auto;
     margin: 0 auto;
 }
+
+
 
 .work-screen-open img {
     width: 500px;
@@ -174,6 +178,15 @@ body {
     to {
         height: 456px;
     }
+}
+
+.work-screen {
+    height: 526px;
+    width: 131px;
+    margin: 84px auto 0px;
+    background: rgba(69, 43, 170, 0.4);
+    border: 5px solid black;
+    border-radius: 20px 20px 50px 50px;
 }
 
 .work-screen-open {
