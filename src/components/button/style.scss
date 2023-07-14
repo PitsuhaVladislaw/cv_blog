@@ -2,47 +2,78 @@ body {
     background: rgb(80, 76, 76);
 }
 
-.nav-menu {
-    display: flex;
-    grid-template-columns: 140px 140px;
-    grid-template-rows: 82px 82px;
-    height: 70px;
-    width: 480px;
-    border-radius: 50px;
-    margin: 0 auto;
+:root {
+    --button-red-color: #760F0F99;
+    --back-men-grey-color: rgba(74, 69, 69, 0.80);
+    --active-grey-color: rgba(122, 122, 122, 0.70);
 }
 
-%settings-shared {
-    background: rgb(41 39 39 / 50%);
-    border: 5px solid #000000;
+.set-menu {
     display: flex;
-    height: auto;
-    width: 120px;
-    align-items: center;
     justify-content: center;
-    img {
-        height: 56px;
-        width: 56px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    #cl-btn {
+        width: 80px;
+        height: 40px;
+        border-radius: 50px;
+        background: var(--back-men-grey-color);
+        border: 3px solid black;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Courier New", Courier, monospace;
+        color: black;
+    }
+
+    #cl-btn:hover {
+        background: var(--active-grey-color);
+        border: 1px solid black;
     }
 }
 
-#btn-1 {
-    @extend %settings-shared;
-    border-radius: 50px 0px 0px 50px;
+.nav-menu {
+    height: 70px;
+    width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: var(--back-men-grey-color);
+    border: 3px solid black;
+
+    button {
+        width: 120px;
+        height: 70px;
+        border: 5px solid black;
+        background: var(--back-men-grey-color);
+    }
+
+    button:hover {
+        background: var(--active-grey-color);
+    }
+
+    img {
+        width: 56px;
+        height: 56px;
+    }
 }
 
-
-#btn-2 {
-    @extend %settings-shared;
-    border-radius: 0px 0px 0px 0px;
+@keyframes closeMenu {
+    from {
+        width: 480px;
+    }
+    to {
+        width: 100px;
+    }
 }
 
-#btn-3 {
-    @extend %settings-shared;
-    border-radius: 0px 0px 0px 0px;
-}
-
-#btn-4 {
-    @extend %settings-shared;
-    border-radius: 0px 50px 50px 0px;
+@keyframes openMenu {
+    from {
+        width: 100px;
+    }
+    to {
+        width: 480px;
+    }
 }

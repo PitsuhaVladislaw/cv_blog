@@ -11,6 +11,9 @@ body {
 }
 
 .head-main {
+    position: sticky;
+    top: 0;
+    left: 0;
     height: auto;
     width: auto;
     background: black;
@@ -199,17 +202,44 @@ body {
     border: 1px solid white;
 }
 
+.set-menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    #cl-btn {
+        width: 80px;
+        height: 40px;
+        border-radius: 50px;
+        background: var(--back-men-grey-color);
+        border: 3px solid black;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Courier New", Courier, monospace;
+        color: black;
+    }
+
+    #cl-btn:hover {
+        background: var(--active-grey-color);
+        border: 1px solid black;
+    }
+}
+
 .nav-menu {
+    height: 70px;
+    width: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
-    width: 480px;
     border-radius: 50px;
     background: var(--back-men-grey-color);
+    border: 3px solid black;
 
     button {
         width: 120px;
+        height: 70px;
         border: 5px solid black;
         background: var(--back-men-grey-color);
     }
@@ -217,9 +247,30 @@ body {
     button:hover {
         background: var(--active-grey-color);
     }
+
     img {
         width: 56px;
         height: 56px;
+    }
+}
+
+@keyframes closeMenu {
+    from {
+        width: 480px;
+    }
+
+    to {
+        width: 100px;
+    }
+}
+
+@keyframes openMenu {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 480px;
     }
 }
 
@@ -251,19 +302,19 @@ body {
     background-color: black;
 }
 
-#knoledge {
+.knoledge {
     height: auto;
     @extend %size-fon;
     background-image: url(../assets/image/image-5.jpg);
 }
 
-#education {
+.education {
     height: 790px;
     @extend %size-fon;
     background-image: url(../assets/image/image\ 8.png);
 }
 
-#projects {
+.projects {
     height: 790px;
     @extend %size-fon;
     background-image: url(../assets/image/image\ 7.png);
