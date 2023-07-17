@@ -66,3 +66,15 @@ function closeMenu(e) {
 
 btnMenu.forEach(btn => btn.addEventListener("click", closeMenu));
 clBtn.addEventListener("click", openMenu);
+
+//for guests
+
+window.addEventListener("load", () => {
+    let answGuest = prompt("Site's not ready! Did you understand? (Yes, No)");
+    
+    if(answGuest == "Yes") {
+        alert("Welcome to me!");
+    } else if(answGuest == "No" || answGuest == "") {
+        window.close();
+    }
+})
