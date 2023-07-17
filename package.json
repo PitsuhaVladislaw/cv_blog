@@ -1,7 +1,15 @@
 {
-  "name": "cv-site",
-  "version": "0.1.0",
+  "name": "cv-blog",
+  "version": "1.1.0",
   "private": true,
+  "description": "My personal website with a description of my CV and other important information for users and companies.",
+  "main": "index.js",
+  "homepage": "https://github.com/PitsuhaVladislaw/cv_blog",
+  "bugs": {
+    "email": "vladikpizza02@gmail.com"
+  },
+  "author": "Vladislav Pitsukha <vladikpizza02@gmail.com>",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
