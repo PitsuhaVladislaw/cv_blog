@@ -12,7 +12,7 @@
         <header class="head-main">
             <div id="bor-size">
                 <div class="logo-icon">
-                    <img src="../src/assets/icon/icon-link.png" alt="logo-style">
+                    <a href=""><img src="../src/assets/icon/icon-link.png" alt="logo-style"></a>
                 </div>
                 <div class="logo-text">
                     <p>Junior Front-end Developer</p>
@@ -20,7 +20,7 @@
             </div>
         </header>
         <main>
-            <section class="main" id="#1">
+            <section class="main" id="#main">
                 <div class="fon-set">
                     <div class="block-infa">
                         <div class="com-infa">
@@ -28,7 +28,7 @@
                                 <div class="bor-foto">
                                     <img src="../src/assets/image/IMG_20230521_151249_278.png" alt="my foto">
                                 </div>
-                                <div class="block-desc">
+                                <div class="block-desc" id="block-nav">
                                     <h3>Short information</h3>
                                     <div class="bl-desc-text">
                                         <div style="text-align: right;">
@@ -42,18 +42,27 @@
                                             <p>21</p>    
                                         </div>
                                     </div>
-                                    <div id="but-text">
-                                        <h2>Contact me</h2>
-                                    </div>
+                                    <nav style="display: none;" class="nav-links" id="nav-links">
+                                        <div><a title="Link to Number" href="tel:+48780640571"><img src="../src/assets/icon/img-link 2.png" alt="link"></a></div>
+                                        <div><a title="Link to Email" href="mailto:vladikpizza02@gmail.com"><img src="../src/assets/icon/img-link 1.png" alt="link"></a></div>
+                                        <div><a title="Link to Telegram" href="https://t.me/vladislavptsh"><img src="../src/assets/icon/img-link 4.png" alt="link"></a></div>
+                                        <div><a title="Link to GitHub" href="https://github.com/PitsuhaVladislaw"><img src="../src/assets/icon/img-link 5.png" alt="link"></a></div>
+                                        <div><a title="Link to Discord" href="https://discord.com/users/vladislavpitsukha"><img src="../src/assets/icon/img-link 3.png" alt="link"></a></div>
+                                        <div><a title="Link to Skype" href="skype:live:.cid.dc343445bcc099bf"><img src="../src/assets/icon/img-link 6.png" alt="link"></a></div>
+                                        <div><a title="Link to LinkedIn" href="https://www.linkedin.com/in/vladislav-pitsukha-17050723a/"><img src="../src/assets/icon/img-link 7.png" alt="link"></a></div>
+                                        <div><a title="Link to Resume" href="https://drive.google.com/drive/my-drive"><img src="../src/assets/icon/img-link 8.jpg" alt="link"></a></div>
+                                    </nav>
+                                    <button id="nav-btn1">Contact me</button>
+                                    <button style="display: none;" id="nav-btn2">Contact me</button>
                                 </div>
                             </div>
                             <div class="set-menu">
                                 <button id="cl-btn">Open</button>
                                 <div style="width: 100px" class="nav-menu" id="nav-menu">
-                                    <button style="display: none; border-radius: 50px 0px 0px 50px;"><img src="../src/assets/svg/image 12.png" alt="icon-account"><a href="1"></a></button>
-                                    <button style="display: none;"><img src="../src/assets/svg/image 10.png" alt="icon-knowledges"><a href="2"></a></button>
-                                    <button style="display: none;"><img src="../src/assets/svg/image 11.png" alt="icon-computer"><a href="3"></a></button>
-                                    <button style="display: none; border-radius: 0 50px 50px 0;"><img src="../src/assets/svg/image 13.png" alt="icon-graduate"><a href="4"></a></button>
+                                    <button onclick="linkParagraf('#main')" style="display: none; border-radius: 50px 0px 0px 50px;"><img src="../src/assets/svg/image 12.png" alt="icon-account"></button>
+                                    <button onclick="linkParagraf('#knoledge')" style="display: none;"><img src="../src/assets/svg/image 10.png" alt="icon-knowledges"></button>
+                                    <button onclick="linkParagraf('#education')" style="display: none;"><img src="../src/assets/svg/image 11.png" alt="icon-computer"></button>
+                                    <button onclick="linkParagraf('#projects')" style="display: none; border-radius: 0 50px 50px 0;"><img src="../src/assets/svg/image 13.png" alt="icon-graduate"></button>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +86,7 @@
                     </div>
                 </div>
             </section>
-            <section class="knoledge" id="#2">
+            <section class="knoledge" id="#knoledge">
                 <div class="fon-set">
                     <div class="block-slills">
                         <div class="blk-pic">
@@ -113,7 +122,7 @@
                     </div>
                 </div>
             </section>
-            <section class="education" id="#3">
+            <section class="education" id="#education">
                 <div class="fon-set">
                     <div class="edu-blocks">
                         <div id="edu-block">
@@ -125,7 +134,7 @@
                                     <span>Higher education</span>
                                     <br>
                                     <br>
-                                    Minsk Branch of Plekhanov Russian University of
+                                    Belarusian State University
                                     <br>
                                     <br>
                                     <span>Profile:</span> Student, 4rd year
@@ -161,7 +170,7 @@
                     </div>
                 </div>
             </section>
-            <section class="projects" id="#4">
+            <section class="projects" id="#projects">
                 <div class="fon-set">
                     <div class="work-cards">
                         <div id="work-1">

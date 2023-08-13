@@ -30,7 +30,7 @@ selectSkl.addEventListener("change", function(e) {
     });
 })
 
-// Nav-menu
+//* Nav-menu
 
 const navMenu = document.getElementById("nav-menu");
 const btnMenu = document.querySelectorAll(".nav-menu button");
@@ -40,7 +40,7 @@ function openMenu(e) {
     e.preventDefault();
 
     navMenu.style.animationName = "openMenu";
-    navMenu.style.animationDuration = "1.5s";
+    navMenu.style.animationDuration = "1.0s";
     navMenu.style.width = "480px";
 
     setTimeout(() => {
@@ -59,7 +59,7 @@ function closeMenu(e) {
 
     setTimeout(() => {
         navMenu.style.animationName = "closeMenu";
-        navMenu.style.animationDuration = "1.5s";
+        navMenu.style.animationDuration = "1.0s";
         navMenu.style.width = "100px";
     }, 500);
 }
@@ -67,8 +67,14 @@ function closeMenu(e) {
 btnMenu.forEach(btn => btn.addEventListener("click", closeMenu));
 clBtn.addEventListener("click", openMenu);
 
-//for guests
+//* For buttons of nav-menu
 
+function linkParagraf(url) {
+    window.location.href = "#" + url;
+}
+
+//*for guests
+/*
 window.addEventListener("load", () => {
     let answGuest = prompt("Site's not ready! Did you understand? (Yes, No)");
     
@@ -78,3 +84,31 @@ window.addEventListener("load", () => {
         window.close();
     }
 })
+*/
+
+
+//*for nav-links
+
+const navLinks = document.querySelector('#nav-links');
+const btnNav1 = document.querySelector('#nav-btn1');
+const btnNav2 = document.querySelector('#nav-btn2');
+
+
+btnNav1.addEventListener('click', openNavMenu);
+btnNav2.addEventListener('click', closeNavMenu);
+
+function openNavMenu(e) {
+    e.preventDefault();
+
+    navLinks.style.display = "";
+    btnNav1.style.display = "none";
+    btnNav2.style.display = "";
+}
+
+function closeNavMenu(e) {
+    e.preventDefault();
+
+    navLinks.style.display = "none";
+    btnNav2.style.display = "none";
+    btnNav1.style.display = "";
+}
