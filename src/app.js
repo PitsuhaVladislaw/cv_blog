@@ -74,17 +74,8 @@ function linkParagraf(url) {
 }
 
 //*for guests
-/*
-window.addEventListener("load", () => {
-    let answGuest = prompt("Site's not ready! Did you understand? (Yes, No)");
-    
-    if(answGuest == "Yes") {
-        alert("Welcome to me!");
-    } else if(answGuest == "No" || answGuest == "") {
-        window.close();
-    }
-})
-*/
+
+window.addEventListener("load", alert("Site's not ready! Sorry for the inconvenience."));
 
 
 //*for nav-links
