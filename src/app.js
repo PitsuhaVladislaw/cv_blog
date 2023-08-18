@@ -1,34 +1,34 @@
 /*
 * Functions for block "Knoledge"
 */
-const selectSkl = document.getElementById("select-skill");
+let listOfSkill = document.getElementById("skills");
 
-const optHardSkl = document.getElementById("hard-skl");
-const optSoftSkl = document.getElementById("soft-skl");
+const listHard = [
+    "HTML", "CSS", "JS",
+    "TS", "React", "Redux",
+    "Figma", "Bootstrap", "SCSS",
+    "Git", "GitHub"
+];
 
-const softText = document.getElementById("soft-text");
-const hardText = document.getElementById("hard-text");
+const listSoft = [
+    "I am ready to work hard and learn new things for myself, experience in practice is much better than in a simple studied theory.", 
+    "I read new material with great interest and work it out in every possible way in my own projects or in assignments that I find on the Internet.",
+    "I am hardworking, interested, responsible, calmly approach the work and do it carefully."
+];
 
-selectSkl.addEventListener("change", function(e) {
-    e.preventDefault();
+function changeSkill() {
+    let i = listOfSkill.selectedIndex;
+    let text = document.querySelector("#skill-text p")
 
-    const optHardSkl = document.getElementById("hard-skl");
-    const optSoftSkl = document.getElementById("soft-skl");
+    if (listOfSkill.options[i].value === "Hard") {
+        text.innerHTML = "";
+        text.innerHTML = listHard.join(', ');
 
-    optSoftSkl.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        hardText.classList.add("closedText");
-        softText.classList.remove("closedText");
-    });
-
-    optHardSkl.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        softText.classList.add("closedText");
-        hardText.classList.remove("closedText");
-    });
-})
+    } else if (listOfSkill.options[i].value === "Soft") {
+        text.innerHTML = "";
+        text.innerHTML = listSoft.join(' ');
+    }
+}
 
 //* Nav-menu
 
@@ -84,6 +84,7 @@ const navLinks = document.querySelector('#nav-links');
 const btnNav1 = document.querySelector('#nav-btn1');
 const btnNav2 = document.querySelector('#nav-btn2');
 
+let aLinks = document.querySelectorAll('#nav-links a');
 
 btnNav1.addEventListener('click', openNavMenu);
 btnNav2.addEventListener('click', closeNavMenu);
