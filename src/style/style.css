@@ -86,7 +86,7 @@
   }
   .block-infa {
     display: flex;
-    margin-top: 23px auto 70px;
+    margin: 20px auto 80px;
     justify-content: space-evenly;
   }
   .com-infa {
@@ -98,6 +98,9 @@
     align-items: center;
   }
   .bor-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 260px;
     height: 370px;
     background: rgba(22, 21, 21, 0.5);
@@ -105,8 +108,8 @@
     border-radius: 70px;
   }
   .bor-foto img {
-    width: 260px;
-    height: 370px;
+    width: 255px;
+    height: 365px;
     border-radius: 70px;
   }
   .block-desc {
@@ -169,13 +172,13 @@
     background: black;
   }
   .nav-links div img {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     border-radius: 10px;
   }
   .nav-links div img:hover {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
   }
   .nav-links div:hover {
     outline: 2px double red;
@@ -305,81 +308,93 @@
     background-image: url(../assets/image/image-5.jpg);
   }
   .education {
-    height: 790px;
+    height: auto;
     background-image: url(../assets/image/image\ 8.png);
   }
   .projects {
-    height: 790px;
+    height: auto;
     background-image: url(../assets/image/image\ 7.png);
   }
   .edu-blocks {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 90px;
-    padding-right: 90px;
-    margin: 80px auto 0;
+    margin: 80px 35px;
   }
   #edu-block {
-    width: 520px;
-    height: 630px;
-    background: linear-gradient(0deg, rgba(50, 19, 101, 0.7), rgba(50, 19, 101, 0.7)), rgba(255, 255, 255, 0.9);
-    border-radius: 40px;
-  }
-  #head-block {
     display: flex;
-    width: 450px;
-    height: 78px;
-    border: 5px solid black;
-    border-radius: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    height: 630px;
+    background: linear-gradient(0deg, rgba(20, 82, 154, 0.6) 0%, rgba(20, 82, 154, 0.6) 100%), rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    padding: 30px 35px;
+  }
+  #edu-block .head-text {
+    display: flex;
+    width: 330px;
+    height: 60px;
+    padding: 0;
     justify-content: center;
     align-items: center;
-    margin: 30px auto 25px;
+    flex-shrink: 0;
+    border-radius: 40px 0px;
+    outline: 5px solid #000;
   }
-  #head-block h2 {
-    font-size: 25px;
-    font-weight: 700;
-    font-family: "Inter";
-    color: black;
-    line-height: 38px;
+  #edu-block .head-text h2 {
+    color: #000;
     text-align: center;
-    letter-spacing: 18.75px;
+    font-family: "Inter";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
     text-decoration-line: underline;
-    margin: 0 auto;
+    margin: 0;
   }
-  .text-block {
-    font-size: 22px;
+  #edu-block .text-block {
+    margin-top: 20px;
+    width: 330px;
+    height: 472px;
+  }
+  #edu-block .text-block p {
+    font-size: 20px;
     font-weight: 400;
     font-family: "Inter";
     color: black;
     line-height: 38px;
-    height: 474px;
-    width: 474px;
-    margin: 0 auto;
     letter-spacing: 5px;
+    margin: 25px 0;
   }
-  .text-block span {
+  #edu-block .text-block p span {
     font-weight: 800;
-    text-transform: uppercase;
     letter-spacing: 10px;
   }
-  ul li, ul p {
+  #edu-block .text-block ul li {
     font-family: "Inter";
     font-size: 24px;
     color: black;
   }
-  ul {
+  #edu-block .text-block ul {
     padding: 0px;
   }
-  ul p {
-    font-weight: 800;
-    letter-spacing: 20px;
-    margin: 5px auto;
-  }
-  ul li {
+  #edu-block .text-block ul li {
     font-weight: 400px;
     margin-left: 50px;
     letter-spacing: 12px;
+  }
+  #edu-block .text-block ul h3 {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Inter";
+    color: black;
+    line-height: 38px;
+    letter-spacing: 5px;
+    margin: 25px 0;
   }
   .block-slills {
     display: flex;
@@ -391,16 +406,22 @@
     width: auto;
   }
   .pic-bor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 320px;
     height: 320px;
     background: rgba(255, 255, 255, 0.17);
     border: 3px solid #151313;
   }
   .pic-bor img {
-    width: 300px;
-    height: 300px;
+    width: 315px;
+    height: 315px;
   }
   .bor-1 {
+    border-radius: 50px 100px 0px;
+  }
+  .bor-1 img {
     border-radius: 50px 100px 0px;
   }
   .bor-2 {
@@ -408,31 +429,31 @@
     margin-top: 310px;
     margin-left: 4px;
   }
-  #soft-text {
+  .bor-2 img {
+    border-radius: 0px 100px 50px 100px;
+  }
+  #skill-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 18px;
-    height: auto;
+    height: 460px;
     width: 356px;
     background: rgba(49, 134, 123, 0.9);
     border: 3px solid black;
     border-radius: 60px 0px 60px 60px;
     padding: 47px 23px;
   }
-  #soft-text p {
+  #skill-text p {
     font-family: "Inter";
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: black;
     text-align: justify;
     text-indent: 45px;
-    line-height: 25px;
+    line-height: 35px;
     word-spacing: 20px;
-  }
-  #hard-text {
-    display: none;
   }
   .close-text {
     display: none;
@@ -444,10 +465,7 @@
     justify-content: center;
     align-items: center;
   }
-  .closedText {
-    display: none;
-  }
-  #select-skill {
+  .type-slills select {
     height: 52px;
     width: 356px;
     border: 2px solid black;
@@ -461,8 +479,11 @@
     letter-spacing: 0.47em;
     line-height: 36.31px;
   }
-  #select-skill:hover {
+  .type-slills select:hover {
     background: rgba(33, 168, 145, 0.69);
+  }
+  .closedText {
+    display: none;
   }
   .work-cards {
     display: flex;
