@@ -75,8 +75,9 @@ function linkParagraf(url) {
 
 //*for guests
 
-window.addEventListener("load", alert("Site's not ready! Sorry for the inconvenience."));
-
+window.addEventListener("load", alert(
+    `The page is changing its design and all JS functionality, the information is outdated. \nMy apologies.`
+));
 
 //*for nav-links
 
